@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SMS Dashboard</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        table { width: 100%; border-collapse: collapse; }
+        td, th { padding: 8px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>Received SMS Messages</h1>
+    <table>
+        <tr><th>Sender</th><th>Message</th><th>Device</th><th>Time</th></tr>
+        {% for msg in messages %}
+        <tr>
+            <td>{{ msg[0] }}</td>
+            <td>{{ msg[1] }}</td>
+            <td>{{ msg[2] }}</td>
+            <td>{{ msg[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
