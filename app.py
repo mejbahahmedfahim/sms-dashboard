@@ -31,7 +31,7 @@ def receive_sms():
     conn.close()
     return "SMS received", 200
 
-@app.route("/admin")
+@app.route("/")
 def admin_dashboard():
     conn = sqlite3.connect('sms.db')
     c = conn.cursor()
@@ -42,3 +42,4 @@ def admin_dashboard():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
