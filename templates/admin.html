@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SMS Dashboard</title>
+</head>
+<body>
+  <h1>Received SMS Messages</h1>
+  <ul>
+    {% for sms in messages %}
+      <li><strong>{{ sms['from'] }}</strong>: {{ sms['body'] }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
